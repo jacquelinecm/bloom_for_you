@@ -2,16 +2,17 @@ head{
   font-family:'Tangerine', serif;
 }
 body {
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Darker Grotesque', serif;
 
   text-align: center;
 
   background-image: url( "https://heattransfervinyl4u.com/image/cache/111bc/610-cover-800x800.jpg" );
 }
-
-
-
-
-
-
+footer {
+  link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+  font-family: 'Darker Grotesque', serif;
+  background-color: #eddaeb;
+  padding: 100px;
+  text-align:center;
+  color: black;
 }
