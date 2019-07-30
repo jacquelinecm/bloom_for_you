@@ -3,11 +3,58 @@
 <html>
 <head>
     <script src = "bloomforyou.js"> </script>
-    <import json>
+
     <link rel = "stylesheet" href = "skincare.css">
   </head>
   <body>
-    <h1>  Clean Skincare</h1>
-    <div id="quiz"></div>
-    <button id="submit">Get Results</button>
-    <div id="results"></div>
+
+<div id="header"><h1>What products are best for you?</h1></div>
+
+<form  id="form1">
+<p>Whats your skin type?</p><td>
+<label><input type="radio" name="skintype" id="oily" value="1" /> (A) oily</label>
+<label><input type="radio" name="skintype" id="dry" value="2" />(B) dry</label>
+<label><input type="radio" name="skintype" id="combo" value="3" /> (C) combo</label>
+
+<p>How many products do you use?</p>
+<label><input type="radio" name="products" id="3" value="1" />(A) 3</label>
+<label><input type="radio" name="products" id="5" value="2" /> (B) 5</label>
+<label><input type="radio"  name="products"id="2" value="3" /> (C) 2</label>
+
+<p>What SPF do you wear?</p>
+<label><input type="radio" name="sunprotect" id="none" value="1" />(A) none</label>
+<label><input type="radio" name="sunprotect" id="15" value="2" /> (B) 15</label>
+<label><input type="radio" name="sunprotect" id="35" value="3" /> (C) 35</label>
+
+<p>What do you want to improve?</p>
+<label><input type="radio" name="improve" id="texture" value="1" /> (A) texture</label>
+<label><input type="radio" name="improve" id="clearness" value="2" />(B) clearness</label>
+<label><input type="radio" name="improve" id="moisture" value="3" />(C) moisture</label>
+
+<p>Whats your price range?</p>
+<label><input type="radio" name="price" id="drugstore" value="1" /> (A) drugstore</label>
+<label><input type="radio" name="price" id="sephora" value="2" /> (B) sephora</label>
+<label><input type="radio" name="price" id="luxury price" value="3" /> (C) luxury price</label>
+
+
+
+<button type="submit" value="Submit" onclick = "function2()">Submit</button>
+
+<!-- <input type="submit" value="Submit"> -->
+
+
+
+</form>
+
+<img id= "myImage" src = "">
+
+<p id="answer"></p>
+<p id="answer2"></p>
+<p id = "answer3"></p>
+<img id= "cheappicture"  src = "">
+
+
+</div>
+
+</body>
+</html>
