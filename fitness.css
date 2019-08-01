@@ -9,7 +9,7 @@ body {
   font-family: 'Dancing Script', cursive;
   padding: 80px;
   text-align: center;
-  background: #8c75c7;
+  background: #fa4d4d;
   color: black;
 }
 
@@ -31,7 +31,7 @@ body {
 .main {
   font size: 40px;
   flex: 40%;
-  background-color: #f2e3e1;
+  background-color: #e6dada;
   padding: 20px;
 }
 
@@ -54,7 +54,7 @@ body {
   font-family: 'Dancing Script', cursive;
   padding: 20px;
   text-align: center;
-  background: #8c75c7;
+  background: #fa4d4d
 
 
 }
