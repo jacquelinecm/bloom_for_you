@@ -1,0 +1,103 @@
+
+body {
+
+  font-family: 'Noto Sans KR', sans-serif;
+
+  font-size: 14pt;
+
+
+}
+
+.head {
+  font-family: 'Work Sans', sans-serif;
+}
+
+#wrapper {
+
+  width: 80%;
+
+  padding: 1%;
+
+  margin: 1em auto;
+
+  border: solid 1px silver;
+
+}
+
+/* Text of the questions */
+
+.question p:first-child {
+
+  font-weight: bold;
+
+}
+
+
+
+/* Each possible answer */
+
+.ans {
+
+  margin-left: 10px;
+
+}
+
+
+
+/* Correct answer */
+
+.right {
+
+  display: block;
+
+  border: solid 1px green;
+
+  background: url("greencheck.png") no-repeat 10px;
+
+  padding: 10px;
+
+  padding-left: 60px;
+
+}
+
+
+
+/* Incorrect answer */
+
+.wrong {
+
+  display: block;
+
+  border: solid 1px red;
+
+  background: url("redx.png") no-repeat 10px;
+
+  padding: 10px;
+
+  padding-left: 60px;
+
+}
+
+
+
+/* Answer feedback */
+
+.ans span {
+
+  display: none;
+
+  margin-left: 20px;
+
+  padding-top: 0.5em;
+
+}
+
+
+
+/* Take hidden feedback out of hiding when applied */
+
+.show {
+
+  display: block;
+
+}

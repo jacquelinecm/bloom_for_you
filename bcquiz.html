@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+	<center><title>&#x1F397; Interective Quiz &#x1F397;</title></center>
+
+	<meta name="description" content="A simple interactive quiz for Breast Cancer">
+
+	<!-- I've intentionally put all the code in one file and kept it simple for the benefit
+
+	of students who are just learning this stuff. -->
+
+	<style>
+
+		body {
+
+
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14pt;
+
+
+		}
+
+		.head{
+			font-family: 'Noto Sans', sans-serif;
+		}
+
+		#wrapper {
+
+			width: 80%;
+
+			padding: 1%;
+
+			margin: 1em auto;
+
+			border: solid 1px silver;
+
+		}
+
+		/* Text of the questions */
+
+		.question p:first-child {
+
+			font-weight: bold;
+
+		}
+
+
+
+		/* Each possible answer */
+
+		.ans {
+
+			margin-left: 10px;
+
+		}
+
+
+
+		/* Correct answer */
+
+		.right {
+
+			display: block;
+
+			border: solid 1px green;
+
+			background: url("greencheck.png") no-repeat 10px;
+
+			padding: 10px;
+
+			padding-left: 60px;
+
+		}
+
+
+
+		/* Incorrect answer */
+
+		.wrong {
+
+			display: block;
+
+			border: solid 1px red;
+
+			background: url("redx.png") no-repeat 10px;
+
+			padding: 10px;
+
+			padding-left: 60px;
+
+		}
+
+
+
+		/* Answer feedback */
+
+		.ans span {
+
+			display: none;
+
+			margin-left: 20px;
+
+			padding-top: 0.5em;
+
+		}
+
+
+
+		/* Take hidden feedback out of hiding when applied */
+
+		.show {
+
+			display: block;
+
+		}
+
+	</style>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+
+		$(document).ready(function () {
+
+			$("p.ans").click(function () {
+
+				//Get the id of the div
+
+				var qnum = "#" + $(this).parent().attr("id");
+
+				//Clear previous freeback:
+
+				$(qnum + " p.ans").removeClass("right wrong");
+
+				$(qnum + " p span").css("display", "none");
+
+				//Apply right or wrong class to p and span.
+
+				var applyclass = "wrong"
+
+				var spancolor = "red"
+
+				if ($(this).hasClass("correct")) {
+
+					applyclass = "right";
+
+					spancolor = "green"
+
+				}
+
+				$(this).addClass(applyclass);
+
+				$(this).children(":first").css("display", "block").css("color", spancolor);
+
+			})
+
+		});
+
+	</script>
+
+</head>
+
+
+
+<body style="background-color: #ECBDF0;">
+
+		<center><h1>&#x1F397;Interactive Quiz &#x1F397;</h1></center>
+
+	<div id="wrapper">
+
+		<!-- Each question should be in its own div with a unique ID like q1, q2, and so forth -->
+
+		<!-- Each optional answer has a class of "ans" and the correct answer (only) has an additional class of "correct" -->
+
+		<!-- Use p tags the question and for each answer -->
+
+		<div class="question" id="q1">
+
+			<p>1. Which of the following is one symptom of Breast Cancer?</p>
+
+			<p class="ans correct">a) Pain in any ara of the breast<span>Correct !</span></p>
+
+			<p class="ans">b) HIV breakout<span>Try again</span></p>
+
+			<p class="ans">c) Sudden discoloration<span>Try again</span></p>
+
+			<p class="ans">d) Sensitive skin<span>Try agin</span></p>
+
+		</div>
+
+		<div class="question" id="q2">
+
+			<p>2. Which of the following is a way to diagnose Breast Cancer?</p>
+
+			<p class="ans ">a) EKG<span>Try again</span></p>
+
+			<p class="ans">b) X-Ray<span>Try again</span></p>
+
+			<p class="ans correct">c) Mamogram<span>Correct !</p>
+
+			<p class="ans">d) Checkup<span>Try again</span></p>
+
+			<div class="question" id="q2">
+
+			<p>2. Which of the following women is significant to breast cancer?</p>
+
+			<p class="ans ">a) Grace Smith<span>Try again</span></p>
+
+			<p class="ans">b) Amy Elliot<span>Try againy</span></p>
+
+			<p class="ans">c) Judy Hopkins<span>Try again</p>
+
+			<p class="ans correct">d) Susan J Komen<span>Correct!</span></p>
+
+		</div>
+
+	</div>
+
+	<!-- Images -->
+
+	<!-- <p style="margin:3em;text-align:center;">Here are the two images I used. They're public domain, so feel free to download.<br><br>
+
+	<img src="greencheck.png" alt="Green checkmark">&nbsp;&nbsp;<img src="redx.png" alt="Red X"> -->
+
+	</p>
+
+
+
+
+
+</body>
+
+
+
+</html>
